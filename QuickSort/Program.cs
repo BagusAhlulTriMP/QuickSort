@@ -110,13 +110,30 @@ namespace QuickSort
             Console.WriteLine(" Sorted array element");
             Console.WriteLine("\n======================");
 
-            for (int j = 0; j < n; j++) 
+            for (int j = 0; j < n; j++)
             {
                 Console.WriteLine(arr[j]);
             }
             Console.WriteLine("\nNumber of comparison: " + cmp_count);
             Console.WriteLine("\nNumber of data movement" + mov_count);
         }
+        int getSize()
+        {
+            return (n);
+        }
+        static void Main(string[] args)
+        {
+            //declaring theobject at the class
+            Program myList = new Program();
+            //accept array element
+            myList.input();
+            //calling the sorting funcytion
+            //first call to quick sort.algorithm
+            myList.q_sort(0, myList.getSize() - 1);
+            //display sorted array
+            myList.display();
+            //to exit from the console
+            Console.WriteLine("\n\nPress enter to exit. ");
+        }
     }
 }
-          
